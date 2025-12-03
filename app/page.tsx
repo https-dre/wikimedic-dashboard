@@ -9,12 +9,9 @@ export default function Home() {
   const { token } = useAppContext();
 
   return (
-    <main className="min-h-screen b-white flex flex-col">
+    <main className="min-h-screen h-full b-white flex flex-col">
       <ApiConfig />
-
-      <div className="flex-1 container bg-white mx-auto max-w-6xl">
-        {!token ? <LoginForm /> : <MedicinesList />}
-      </div>
+      <MedicinesList />
     </main>
   );
 }
